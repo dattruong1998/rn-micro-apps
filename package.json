@@ -1,0 +1,14 @@
+{
+  "name": "rn-micro-frontend",
+  "private": true,
+  "scripts": {
+    "bootstrap": "yarn --cwd authen-module && yarn --cwd rn-super-app",
+    "pod-install": "cd authen-module/ios/ && pod install && cd ../../rn-super-app/ios && pod install",
+    "npm-install": "cd authen-module && npm i && cd ../rn-super-app && npm i",
+    "start:authen": "yarn --cwd authen-module start",
+    "start:host": "yarn --cwd rn-super-app start",
+    "run:host:ios": "yarn --cwd rn-super-app ios",
+    "run:authen:ios": "STANDALONE=1 yarn --cwd authen-module ios"
+  },
+  "dependencies": {}
+}
